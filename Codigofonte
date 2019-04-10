@@ -1,1 +1,178 @@
+import java.util.Scanner;
+
+
+public class Lapso_de_Memoria {
+    public static void main(String[] args) {
+        Scanner laje=new Scanner(System.in);
+        
+        char opcao,opcao2, questao1,questao2,local;
+        int pontos = 0,total;
+        String nome;
+              //menu inicial do jogo.
+        do{
+            System.out.println(" ");
+            System.out.println(" ");
+            System.out.println("*******************************************************************************");
+            System.out.println("                      Bem Vindo ao Lapso de Memória!!!                         ");
+            System.out.println("*******************************************************************************");
+            System.out.println("                              Introdução                                       ");
+            System.out.println(" “Uma guerra secreta teve seu fim em um certo dia”.\n" +
+                               "  Um hacker que enriqueceu entre quatro paredes,possuindo-se de tal \n"
+                             + "  delírio de enriquecer ainda mais, decide espionar por meses\n"
+                             + "  um grupo de jovens ciborgues do Colégio CIB. Um dia, dormindo sobre\n"
+                             + "  a própria arma cibernética, desperta e nota que conseguiria invadir\n"
+                             + "  e destruir algumas habilidades lógicas e memórias de um de seus notáveis \n"
+                             + "  aprendizes do colégio CIB.");
+            System.out.println("*******************************************************************************");
+            System.out.println(" Segue as opções do Jogo    ");
+            System.out.println(" 1 - Jogar ");
+            System.out.println(" 2 - Instruções do Jogo ");
+            System.out.println(" 3 - Produção e Criadores ");
+            System.out.println(" 4 - Sair ");
+            System.out.println("*******************************************************************************");
+            
+            System.out.print(" Informe a opção desejada: ");
+            opcao=laje.next().charAt(0);
+            
+            
+            switch (opcao){
+                    case '1':
+                        do{
+                            System.out.println(" Bem Vindo ao Lapso de Memória ");
+                            System.out.println("*******************************");
+                            System.out.println("    Segue as opções do Jogo    ");
+                            System.out.println(" 1 - Iniciar o jogo ");
+                            System.out.println(" 2 - Pontos Ganhos  ");
+                            System.out.println(" 3- Voltar ao Menu Principal ");
+                            System.out.print  (" Informe a opção desejada: ");
+                            opcao2=laje.next().charAt(0);
+                                
+                            
+                            switch (opcao2){
+                                
+                                    
+                                case '1':
+                                    System.out.println("***********************");
+                                     System.out.print( " escolha seu Nickname: ");
+                                     nome=laje.next();
+                                     System.out.println("**********************");
+                                     System.out.println(" esolha um lugar ");
+                                     System.out.println(" 1- BAR    ");
+                                     System.out.println(" 2- PARQUE ");
+                                     System.out.println(" 3- LABORATÓRIO ");
+                                     local=laje.next().charAt(0);
+                                     switch(local){
+                                         case '1':
+                                            System.out.println("******************************************************************");
+                                            System.out.println("  Seu local é o BAR ");
+                                            System.out.println("******************************************************************"); 
+                                            System.out.println("                       VAMOS PARA O JOGO !!!                      ");
+                                            System.out.println("******************************************************************");
+                                            System.out.println(" Questão 1: ");
+                                            System.out.println(" Na linguagem java,o operador que significa igual é: ? ");
+                                            System.out.println(" ");
+                                            System.out.println(" A - = ");
+                                            System.out.println(" B - .== ");
+                                            System.out.println(" C - nenhuma das alternativas ");
+                                            System.out.println(" ");
+                                            System.out.print(" Digite a sua Resposta: ");
+                                            questao1=laje.next().charAt(0);
+                                                        
+                                            switch(questao1){
+                                                 case 'c':
+                                                 case 'C':
+                                                 System.out.println(" Resposta Certa. Parabéns " +nome+ " você ganhou 10 pontos. ");
+                                                 pontos+=10;
+                                                 break;
+                                                 default:
+                                                 System.out.println(nome+ " sua Resposta está Incorretas. ");
+                                                 pontos-=3;
+                                                 
+                                                 
+                                            } 
+                                          case '2':
+                                            System.out.println("******************************************************************");
+                                            System.out.println("  Seu local é o PARQUE ");
+                                            System.out.println("******************************************************************"); 
+                                            System.out.println("                       VAMOS PARA O JOGO !!!                      ");
+                                            System.out.println("******************************************************************");
+                                            System.out.println(" Questão 1: ");
+                                            System.out.println(" Qual dos valores tem base hexadecimal? ");
+                                            System.out.println(" ");
+                                            System.out.println(" A - 10100F ");
+                                            System.out.println(" B - 1752 ");
+                                            System.out.println(" C - 101011 ");
+                                            System.out.println(" ");
+                                            System.out.print(" Digite a sua Resposta: ");
+                                            questao1=laje.next().charAt(0);
+                                                        
+                                            switch(questao1){
+                                                 case 'a':
+                                                 case 'A':
+                                                 System.out.println(" Resposta Certa. Parabéns " +nome+ " você ganhou 10 pontos. ");
+                                                 pontos+=10;
+                                                 break;
+                                                 default:
+                                                 System.out.println(nome+ " sua Resposta está Incorretas. ");
+                                                 pontos-=3;
+                                                 
+                                                 
+                                            }     
+                                         case '3':
+                                            System.out.println("******************************************************************");     
+                                            System.out.println("  Seu local é o LABORATÓRIO ");
+                                            System.out.println("******************************************************************"); 
+                                            System.out.println("                       VAMOS PARA O JOGO !!!                      ");
+                                            System.out.println("******************************************************************");
+                                            System.out.println(" Questão 1: ");
+                                            System.out.println(" Qual é a fórmula para calcular a circunferência de um círculo? ? ");
+                                            System.out.println(" ");
+                                            System.out.println(" A - C=2πr ");
+                                            System.out.println(" B - 2π=C² ");
+                                            System.out.println(" C - C=2π² ");
+                                            System.out.println(" ");
+                                            System.out.print(" Digite a sua Resposta: ");
+                                            questao1=laje.next().charAt(0);
+                                                        
+                                            switch(questao1){
+                                                 case 'A':
+                                                 case 'a':
+                                                 System.out.println(" Resposta Certa. Parabéns " +nome+ " você ganhou 10 pontos. ");
+                                                 pontos+=10;
+                                                 break;
+                                                 default:
+                                                 System.out.println(nome+ " sua Resposta está Incorretas. ");
+                                                 pontos-=3;
+                                                        
+                                            }
+                                     }
+
+                                case '2':
+                                    System.out.println(" Sua Pontuação é de : " + (total=pontos)+ " pontos " );
+                                    System.out.println("*******************************");
+                                    break;
+                                    
+                            }        
+            
+                        }while(opcao2!='3');
+                              break; 
+                               
+                    case '2':
+                        System.out.println(   " Escolha uma alternativa e informe a letra correspondente (a,b,c,d,e).\\n\"\n"+ 
+                                              " Se a resposta for correta você ganhará 10 pontos e passa para a  pergunta seguinte,\\n\"\n" +
+                                              " Caso resposta errada, você passara para a proxima pergunta e não somará nenhum ponto. Boa Sorte!!! \\n\");");
+                        break;
+                    case '3':
+                        System.out.println(" Creditos vão para Alberto, Elton, jizrrel e Eduardo");
+                        System.out.println("*******************************");
+                        break;
+                        }  
+            
+                        
+                        
+            
+        }while(opcao!='4');
+        System.out.print(" Obrigado por Jogar, até breve!!! ");
+    }    
+}
 
